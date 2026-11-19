@@ -1,0 +1,10 @@
+{% extends "gestion/base.html" %}
+
+{% block contenido %}
+<h2>¿Eliminar "{{ objeto }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-peligro" type="submit">Sí, eliminar</button>
+    <a class="btn" href="{% url 'inicio' %}">Cancelar</a>
+</form>
+{% endblock %}
